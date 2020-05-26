@@ -1,3 +1,7 @@
+// when testing on localhost, you cannot load the file directly. You
+// must serve it from a browser. You need an SSL certificate to load
+// the audio recorder.
+
 var gumStream; //stream from getUserMedia() 
 var recorder; //WebAudioRecorder object 
 var input; //MediaStreamAudioSourceNode we'll be recording var encodingType; 
@@ -103,6 +107,5 @@ function createDownloadLink(blob, encoding) {
     li.appendChild(au);
     li.appendChild(link); //add the li element to the ordered list 
 
-    recordedResult
     recordingsList.appendChild(li);
 }
