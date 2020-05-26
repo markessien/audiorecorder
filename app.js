@@ -26,7 +26,7 @@ function startRecording() {
         video: false
     }
 
-    audioContext = new AudioContext; //new audio context to help us record 
+    audioContext = new AudioContext(); //new audio context to help us record 
 
     navigator.mediaDevices.getUserMedia(constraints).then( function(stream) {
 
@@ -37,7 +37,8 @@ function startRecording() {
         input = audioContext.createMediaStreamSource(stream);
 
         //stop the input from playing back through the speakers 
-        input.connect(audioContext.destination)
+        // does the opposite of the comment above
+        // input.connect(audioContext.destination)
 
         //get the encoding 
         encodingType = "mp3";
